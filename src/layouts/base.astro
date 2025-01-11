@@ -2,7 +2,7 @@
 const { title } = Astro.props;
 import '../assets/app.css';
 ---
-<html lang="fr">
+<html lang="fr" data-theme="pokelight">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -12,8 +12,16 @@ import '../assets/app.css';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <title>{ title }</title>
+    <script is:inline>
+        // ☝️ This script prevent the FART effect.
+        if (localStorage.getItem("theme") === null) {
+          document.documentElement.setAttribute("data-theme", "light");
+        } else
+        document.documentElement.setAttribute("data-theme",localStorage.getItem("theme"));
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
   </head>
-  <body data-theme="pokelight" class="max-w-screen w-screen min-h-screen bg-base-200">
+  <body class="max-w-screen w-screen min-h-screen bg-base-200">
     <slot />
   </body>
 </html>

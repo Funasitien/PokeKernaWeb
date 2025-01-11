@@ -1,30 +1,73 @@
 ---
 import { Icon } from "astro-icon/components";
 ---
-<div class="navbar bg-base-100 border-base-300 border-b-4 fixed w-full z-10">
-    <div class="navbar-start flex gap-2">
+
+<div
+  class="bg-base-100 border-base-300 border-b-4 fixed w-full min-w-full z-10 flex flex-col">
+  <input type="checkbox" id="toggle" class="peer hidden" />
+  <div class="navbar">
+    <div class="navbar-start">
+      <label for="toggle" class="btn md:hidden">
+        <Icon name="mdi:hamburger-menu" class="text-3xl" />
+      </label>
+      <div class="hidden md:flex gap-2">
         <a class="btn">
-            <Icon name="mdi:home" class="text-3xl" />
-            <span class="hidden md:block">Accueil</span>
+          <Icon name="mdi:home" class="text-3xl" /> Accueil
         </a>
         <a class="btn">
-            <Icon name="mdi:message-question" class="text-3xl" />
-            <span class="hidden md:block">FAQ</span>
+          <Icon name="mdi:message-question" class="text-3xl" /> FAQ
         </a>
         <a class="btn">
-            <Icon name="mdi:graph-line-shimmer" class="text-3xl" />
-            <span class="hidden md:block">Stats</span>
+          <Icon name="mdi:graph-line-shimmer" class="text-3xl" /> Stats
         </a>
+      </div>
     </div>
     <div class="navbar-center">
       <a class="hover:scale-110 transition-transform duration-500">
         <img src="/logo_title.png" class="w-32 h-auto" />
       </a>
     </div>
-    <div class="navbar-end">
-      <a class="btn btn-primary btn-disabled" href="https://app.pokekerna.xyz" target="_blank">
+    <div class="navbar-end flex gap-2">
+      <button
+        class="btn btn-ghost px-2"
+        data-set-theme="pokelight"
+        data-act-class="hidden">
+        <Icon name="mdi:white-balance-sunny" class="text-3xl" />
+      </button>
+      <button
+        class="btn btn-ghost px-2"
+        data-set-theme="pokedark"
+        data-act-class="hidden">
+        <Icon name="mdi:weather-moonset" class="text-3xl" />
+      </button>
+      <a
+        class="btn btn-primary btn-disabled"
+        href="https://app.pokekerna.xyz"
+        target="_blank">
         <Icon name="mdi:play-circle" class="text-3xl" />
         <span class="hidden md:block">Application</span>
       </a>
     </div>
   </div>
+
+  <div
+    class="max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-96 toggle-checked:max-h-96">
+    <ul class="menu menu-lg rounded-box w-full gap-2">
+      <li>
+        <a>
+          <Icon name="mdi:home" class="text-3xl" /> Accueil
+        </a>
+      </li>
+      <li>
+        <a>
+          <Icon name="mdi:message-question" class="text-3xl" /> FAQ
+        </a>
+      </li>
+      <li>
+        <a>
+          <Icon name="mdi:graph-line-shimmer" class="text-3xl" /> Stats
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
