@@ -2,26 +2,28 @@
 // Ici, on peux ajouter du code, des fichiers ou des variables que l'on pouras ensuite utiliser dans l'HTML
 
 // On importe le composant Icon de astro-icon pour pouvoir l'utiliser dans notre HTML
-import { Icon } from "astro-icon/components";
+import Layout from '../layouts/base.astro';
+import Navbar from '../components/Navbar.astro';
+//import { Icon } from "astro-icon/components";
 ---
 
-<html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body class="w-screen">
-    <!-- Ce tag avec la classe "prose" réactive le style des composants h* -->
-    <article class="prose prose-md mx-auto my-4 text-center">
-      <!-- MX ajoute de la marge sur l'axe X et MY ajoute de la marge sur l'axe Y (ici 4rem)
-	La liste des valeurs possible est sur tailwindcss.com -->
-      <h1 class="inline-flex align-baseline">
-        <Icon name="skill-icons:rocket" class="mr-2 align-baseline" />
-        Mon premier site avec Astro <h1></h1>
-      </h1>
-    </article>
-  </body>
-</html>
+<Layout title="Astro">
+  <Navbar />
+  <div class="flex flex-col h-screen justify-center items-center">
+    <img src="/logo_title.png" />
+    
+    <div class="card card-dash bg-base-100 border-base-300 w-96 mt-4">
+      <div class="card-body">
+        <h2 class="card-title">PokéKerna arrive !</h2>
+        <p>On a juste besoins d'un tout petit peu plus de temps pour vous préparer l'application du siècle !
+        </p>
+        <p>
+          En attendant, pourquoi ne pas faire quelque chose avec ce boutton ?
+        </p>
+        <div class="card-actions justify-center">
+          <button class="btn btn-primary">Je ne fais rien :')</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

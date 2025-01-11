@@ -1,0 +1,20 @@
+---
+import '../assets/app.css';
+---
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="w-screen">
+    <!-- Ce tag avec la classe "prose" réactive le style des composants h* -->
+    <article class="prose prose-md mx-auto my-4 text-center">
+      <!-- MX ajoute de la marge sur l'axe X et MY ajoute de la marge sur l'axe Y (ici 4rem)
+	    La liste des valeurs possible est sur tailwindcss.com -->
+      <slot />
+    </article>
+  </body>
+</html>
