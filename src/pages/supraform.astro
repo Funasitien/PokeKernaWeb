@@ -1,0 +1,98 @@
+---
+import "../assets/app.css";
+---
+
+<html lang="fr" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <title>Pokékerna - Compte</title>
+    <script is:inline>
+      // ☝️ This script prevent the FART effect.
+      if (localStorage.getItem("theme") === null) {
+        document.documentElement.setAttribute("data-theme", "light");
+      } else {
+        document.documentElement.setAttribute(
+          "data-theme",
+          localStorage.getItem("theme")
+        );
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"
+    ></script>
+  </head>
+  <body class="max-w-screen min-h-screen bg-base-200">
+    <div class="flex flex-col h-screen justify-center items-center">
+      <img src="/logo_title.png" />
+      <div class="alert alert-error alert-warning shadow-lg w-96">
+        <span>"'rr'"r"r'"'"</span>
+      </div>
+      <div class="card card-dash bg-base-100 border-base-300 w-96 mt-4">
+        <form method="POST" action="/compte">
+          <div class="card-body">
+            <h2 class="card-title text-2xl justify-center">Inscription 🪄</h2>
+
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Nom d'utilisateur</span>
+              </label>
+              <input
+                type="text"
+                name="username"
+                class="input input-bordered w-full"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Mot de passe</span>
+              </label>
+              <input
+                type="password"
+                name="password"
+                class="input input-bordered w-full"
+                required
+              />
+            </div>
+            <div
+              id="roger"
+              class="h-captcha w-full flex justify-center bg-transparent pt-2"
+              data-sitekey="3dcc1c00-55a0-4300-8478-c178ad6c1618">
+            </div>
+            <div class="card-actions justify-center pt-2 rounded-2xl">
+              <button class="btn btn-success">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  ><path fill="currentColor" d="m2 21l21-9L2 3v7l15 2l-15 2z"
+                  ></path></svg
+                >
+                Valider
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script is:inline>
+    // ☝️ This script prevent the FART effect.
+    if (localStorage.getItem("theme") === null) {
+      document.getElementById("roger").setAttribute("data-theme", "light");
+    } else {
+      document
+        .getElementById("roger")
+        .setAttribute("data-theme", localStorage.getItem("theme"));
+    }
+  </script>
+</html>

@@ -1,5 +1,6 @@
 ---
 const { title } = Astro.props;
+import Navbar from '../components/Navbar.astro';
 import '../assets/app.css';
 ---
 <html lang="fr" data-theme="pokelight">
@@ -11,7 +12,7 @@ import '../assets/app.css';
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <title>{ title }</title>
+    <title>Pokékerna - { title }</title>
     <script is:inline>
         // ☝️ This script prevent the FART effect.
         if (localStorage.getItem("theme") === null) {
@@ -21,7 +22,8 @@ import '../assets/app.css';
     </script>
     <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
   </head>
-  <body class="max-w-screen w-screen min-h-screen bg-base-200">
+  <body class="max-w-screen min-h-screen bg-base-200">
+    <Navbar />
     <slot />
   </body>
 </html>

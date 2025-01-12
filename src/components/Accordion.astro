@@ -1,0 +1,10 @@
+---
+const { title = "Accueil", id = "accordion-1" } = Astro.props;
+---
+<div class="collapse collapse-arrow bg-base-100 border border-base-300">
+    <input type="radio" name={ id } />
+    <div class="collapse-title font-semibold">{ title }</div>
+    <div class="collapse-content text-sm">
+        <slot />
+    </div>
+</div>

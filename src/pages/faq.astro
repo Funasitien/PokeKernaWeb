@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/base.astro';
+import Accordion from '../components/Accordion.astro';
+//import { Icon } from "astro-icon/components";
+---
+
+<Layout title="FAQ">
+    <div class="pt-20 px-2 md:px-10 grid grid-cols-1 gap-4">
+    <Accordion title="Quand est-ce que l'application sortira ?">
+        <p>
+            L'application est en cours de développement, nous n'avons pas encore de date de sortie précise.
+        </p>
+    </Accordion>
+    <Accordion title="C'est quoi la validation des comptes ?">
+        <p>
+            PokéKerna est une application qui est destinée à être utilisée par des élèves et des professeurs du lycée Kernanec. Pour éviter les abus, nous validons manuellement les comptes.
+        </p>
+    </Accordion>
+</div>
+</Layout>

@@ -11,14 +11,17 @@ import { Icon } from "astro-icon/components";
         <Icon name="mdi:hamburger-menu" class="text-3xl" />
       </label>
       <div class="hidden md:flex gap-2">
-        <a class="btn">
+        <a class="btn" href="/">
           <Icon name="mdi:home" class="text-3xl" /> Accueil
         </a>
-        <a class="btn">
+        <a class="btn" href="/faq">
           <Icon name="mdi:message-question" class="text-3xl" /> FAQ
         </a>
-        <a class="btn">
+        <a class="btn" href="/stats">
           <Icon name="mdi:graph-line-shimmer" class="text-3xl" /> Stats
+        </a>
+        <a class="btn" href="/roadmap">
+          <Icon name="mdi:calendar-clock" class="text-3xl" /> Roadmap
         </a>
       </div>
     </div>
@@ -30,13 +33,13 @@ import { Icon } from "astro-icon/components";
     <div class="navbar-end flex gap-2">
       <button
         class="btn btn-ghost px-2"
-        data-set-theme="pokelight"
+        data-set-theme="light"
         data-act-class="hidden">
         <Icon name="mdi:white-balance-sunny" class="text-3xl" />
       </button>
       <button
         class="btn btn-ghost px-2"
-        data-set-theme="pokedark"
+        data-set-theme="dark"
         data-act-class="hidden">
         <Icon name="mdi:weather-moonset" class="text-3xl" />
       </button>
@@ -54,18 +57,23 @@ import { Icon } from "astro-icon/components";
     class="max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-96 toggle-checked:max-h-96">
     <ul class="menu menu-lg rounded-box w-full gap-2">
       <li>
-        <a>
+        <a href="/">
           <Icon name="mdi:home" class="text-3xl" /> Accueil
         </a>
       </li>
       <li>
-        <a>
+        <a href="/faq">
           <Icon name="mdi:message-question" class="text-3xl" /> FAQ
         </a>
       </li>
       <li>
-        <a>
+        <a href="/stats">
           <Icon name="mdi:graph-line-shimmer" class="text-3xl" /> Stats
+        </a>
+      </li>
+      <li>
+        <a href="/roadmap">
+          <Icon name="mdi:calendar-clock" class="text-3xl" /> Roadmap
         </a>
       </li>
     </ul>
