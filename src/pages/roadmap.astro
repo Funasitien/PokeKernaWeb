@@ -1,4 +1,12 @@
-<ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+---
+import Layout from '../layouts/base.astro';
+import Navbar from '../components/Navbar.astro';
+//import { Icon } from "astro-icon/components";
+---
+
+<Layout title="Astro">
+  <Navbar />
+  <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
   <li>
     <div class="timeline-middle">
       <svg
@@ -119,3 +127,4 @@
     </div>
   </li>
 </ul>
+</Layout>
