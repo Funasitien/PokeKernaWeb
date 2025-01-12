@@ -1,9 +1,13 @@
 ---
 import Layout from "../layouts/base.astro";
 import { Icon } from "astro-icon/components";
+const queryParams = Astro.url.searchParams;
+const uid = queryParams.get('uid'); // Retrieves the value of 'myParam'
+console.log(Astro.url);
 ---
 
 <Layout title="Vérificaion">
+  
   <div class="flex flex-col h-screen justify-center items-center">
     <img src="/logo_title.png" />
 
@@ -20,6 +24,17 @@ import { Icon } from "astro-icon/components";
           Notez cependant que nous validons les comptes manuellement, il se peut
           donc que vous ne puissiez pas accéder à l'application tout de suite.
         </p>
+        <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+          <legend class="fieldset-legend">Votre Identifiant</legend>
+          <p>{uid} - {queryParams}</p>
+          <p>
+            {uid ? (
+              {uid}
+            ) : (
+             "❌"
+            )}
+          </p>
+        </fieldset>
         <p>
           Vous pouvez voir quels comptes sont acceptés dans l'application sur
           notre Roadmap.
