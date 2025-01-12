@@ -1,17 +1,13 @@
 ---
 import Layout from "../layouts/base.astro";
 import { Icon } from "astro-icon/components";
-const queryParams = Astro.url.searchParams;
-const uid = queryParams.get('uid'); // Retrieves the value of 'myParam'
-console.log(Astro.url);
 ---
 
 <Layout title="Vérificaion">
   
   <div class="flex flex-col h-screen justify-center items-center">
-    <img src="/logo_title.png" />
 
-    <div class="card card-dash bg-base-100 border-base-300 w-96 mt-4">
+    <div class="card card-dash bg-base-100 border-base-300 w-96 mt-2">
       <div class="card-body">
         <h2 class="card-title text-2xl justify-center">
           Inscription Réussit 🥳
@@ -26,14 +22,11 @@ console.log(Astro.url);
         </p>
         <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
           <legend class="fieldset-legend">Votre Identifiant</legend>
-          <p>{uid} - {queryParams}</p>
-          <p>
-            {uid ? (
-              {uid}
-            ) : (
-             "❌"
-            )}
+          <p class="text-center text-3xl -translate-y-2" id="uid">
           </p>
+          <p class="text flex justify-center text-center">
+            <Icon name="mdi:information-slab-circle" class="text-lg"/>
+            Prend une capture d'écran de cette page pour faire vérifier ton compte plus tard !</p>
         </fieldset>
         <p>
           Vous pouvez voir quels comptes sont acceptés dans l'application sur
@@ -52,4 +45,11 @@ console.log(Astro.url);
       </div>
     </div>
   </div>
+  <script is:inline>
+    const param = new URLSearchParams(window.location.search).get('uid');
+      document.getElementById('uid').textContent = param
+        ? param
+        : '❌';
+    console.log(new URLSearchParams(window.location.search));
+  </script>
 </Layout>
