@@ -7,8 +7,8 @@ import { Icon } from "astro-icon/components";
   
   <div class="flex flex-col h-screen justify-center items-center">
 
-    <div class="card card-dash bg-base-100 border-base-300 w-96 mt-2">
-      <div class="card-body">
+    <div class="card card-dash bg-base-100 border-base-300 w-110 mt-2">
+      <div class="card-body w-full">
         <h2 class="card-title text-2xl justify-center">
           Inscription Réussit 🥳
         </h2>
@@ -20,9 +20,9 @@ import { Icon } from "astro-icon/components";
           Notez cependant que nous validons les comptes manuellement, il se peut
           donc que vous ne puissiez pas accéder à l'application tout de suite.
         </p>
-        <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
-          <legend class="fieldset-legend">Votre Identifiant</legend>
-          <p class="text-center text-3xl -translate-y-2" id="uid">
+        <fieldset class="fieldset bg-base-200 border border-base-300 p-4 rounded-box">
+          <legend class="fieldset-legend text-lg">Votre Identifiant</legend>
+          <p class="text-center text-4xl -translate-y-2" id="uid">
           </p>
           <p class="text flex justify-center text-center">
             <Icon name="mdi:information-slab-circle" class="text-lg"/>
@@ -37,9 +37,9 @@ import { Icon } from "astro-icon/components";
             <Icon name="mdi:calendar-clock" class="text-3xl" />
             Roadmap
           </a>
-          <a class="btn btn-primary" href="/">
-            <Icon name="mdi:home" class="text-3xl" />
-            Accueil
+          <a class="btn btn-success" href="/aide">
+            <Icon name="mdi:check" class="text-3xl" />
+            Aide Vérification
           </a>
         </div>
       </div>

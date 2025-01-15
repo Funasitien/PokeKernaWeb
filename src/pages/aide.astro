@@ -1,0 +1,35 @@
+---
+// Ici, on peux ajouter du code, des fichiers ou des variables que l'on pouras ensuite utiliser dans l'HTML
+
+// On importe le composant Icon de astro-icon pour pouvoir l'utiliser dans notre HTML
+import Layout from '../layouts/base.astro';
+//import { Icon } from "astro-icon/components";
+---
+
+<Layout title="Infos Vérification">
+  <div class="flex flex-col h-screen justify-center items-center">
+    <div class="card card-dash bg-base-100 border-base-300 w-96 mt-4">
+      <div class="card-body">
+        <h2 class="card-title text-2xl justify-center">Comment la vérification fonctionne</h2>
+        <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+          <legend class="fieldset-legend text-2xl">1️⃣</legend>
+          <p>
+            Votre compte est ajouté dans la liste globale de Pokékerna. Un Identifiant unique vous est attribué.
+          </p>
+        </fieldset>
+        <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+          <legend class="fieldset-legend text-2xl">2️⃣</legend>
+          <p>
+            Un membre de l'équipe - élève ou AED - vérifie votre compte.
+          </p>
+        </fieldset>
+        <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+          <legend class="fieldset-legend text-2xl">3️⃣</legend>
+          <p>
+            Votre compte est utilisable sur toutes les plateformes !
+          </p>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</Layout>
