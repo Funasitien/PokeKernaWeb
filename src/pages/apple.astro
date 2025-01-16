@@ -4,5 +4,31 @@ import { Icon } from "astro-icon/components";
 ---
 
 <Layout title="🍎">
-  <h1>Le Problème d'Apple...</h1>
+<div class="px-2 lg:px-4 pt-20 pb-8">
+  <h1 class="text-3xl font-bold">Le Problème d'Apple...</h1>
+  <p>...C'est qu'ils aiment beaucoup l'argent. Mais vraiment beaucoup.</p>
+  <p>Pour qu'Apple accepte d'installer une application, il faut qu'elle ai payé au préalable un certificat de <strong>99$</strong> (à renouveler <strong>chaque année</strong>)</p>
+  <p>Pour un projet étudiant ça fait beaucoup. Mais on baisse pas les bras pour autant</p>
+  <h2 class="text-xl font-bold">Cagnote Principale</h2>
+  <p>Vous pouvez drectement contribuer à la cagnote principale en cliquant sur le boutton orange en bas de la page</p>
+  <h2 class="text-xl font-bold">Commissions</h2>
+  <p>Tout l'argent des commisions ko-fi contribura à la cagnote. Si vous voulez acheter un dessin et aider le projet c'est la bonne option !</p>
+  <a class="btn btn-info">
+  <img src="/kofi.png" class="w-auto h-8"/>
+  Dessins (Guilhem)
+  </a>
+   <a class="btn btn-error">
+  <img src="/kofi.png" class="w-auto h-8"/>
+  Dessins (Elodie)
+  </a>
+  </div>
+      
+<script is:inline>
+  kofiWidgetOverlay.draw('funasitien', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Donate',
+    'floating-chat.donateButton.background-color': '#fcbf47',
+    'floating-chat.donateButton.text-color': '#323842'
+  });
+</script>
 </Layout>
