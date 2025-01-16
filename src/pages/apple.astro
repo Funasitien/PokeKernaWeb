@@ -10,7 +10,11 @@ import { Icon } from "astro-icon/components";
   <p>Pour qu'Apple accepte d'installer une application, il faut qu'elle ai payé au préalable un certificat de <strong>99$</strong> (à renouveler <strong>chaque année</strong>)</p>
   <p>Pour un projet étudiant ça fait beaucoup. Mais on baisse pas les bras pour autant</p>
   <h2 class="text-xl font-bold">Cagnote Principale</h2>
-  <p>Vous pouvez drectement contribuer à la cagnote principale en cliquant sur le boutton orange en bas de la page</p>
+  <p>Vous pouvez drectement contribuer à la cagnote principale en cliquant juste ici</p>
+  <a class="btn btn-warning">
+  <img src="/kofi.png" class="w-auto h-8"/>
+  Cagnote Globale
+  </a>
   <h2 class="text-xl font-bold">Commissions</h2>
   <p>Tout l'argent des commisions ko-fi contribura à la cagnote. Si vous voulez acheter un dessin et aider le projet c'est la bonne option !</p>
   <a class="btn btn-info">
@@ -23,12 +27,4 @@ import { Icon } from "astro-icon/components";
   </a>
   </div>
       
-<script is:inline>
-  kofiWidgetOverlay.draw('funasitien', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Donate',
-    'floating-chat.donateButton.background-color': '#fcbf47',
-    'floating-chat.donateButton.text-color': '#323842'
-  });
-</script>
 </Layout>
