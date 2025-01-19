@@ -1,6 +1,6 @@
 {
-  "latest_version": "1.2.4",
-  "latest_commit": "Ajout des mises à jour automatiques. Enfin, presque.",
+  "latest_version": "1.2.5",
+  "latest_commit": "Rareté afficher en couleur lors de l'ouverture d'un booster.",
   "apk_link": "https://pokekerna.xyz/app-release.apk",
   "ipa_link": "https://pokekerna.xyz/app-release.ipa"
 }
