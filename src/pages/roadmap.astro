@@ -5,6 +5,15 @@ import { Icon } from "astro-icon/components";
 
 <Layout title="Roadmap">
   <div class="pt-20">
+    <img src="/pokékerna.png" class="h-32 w-auto" />
+    <p class="text-center badge badge-secondary -translate-y-12 border-3 border-primary font-bold">
+      ROADMAP
+    </p>
+    <div>
+      <p>
+        Suivez l'avancé du projet PokéKerna
+      </p>
+    </div>
     <ul
       class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical px-10">
       <li>
@@ -20,18 +29,18 @@ import { Icon } from "astro-icon/components";
       <li>
         <hr class="bg-success"/>
         <div class="timeline-middle">
-          <Icon name="mdi:progress-clock" class="h-5 w-5 text-error" />
+          <Icon name="mdi:progress-clock" class="h-5 w-5 text-success" />
         </div>
         <div class="timeline-end md:mb-10">
           <div class="text-lg font-black">ALPHA</div>
           Premières phases de test de l'application, seuls certains comptes sont débloqués 🧪
         </div>
-        <hr />
+        <hr class="bg-success"/>
       </li>
       <li>
-        <hr />
+        <hr class="bg-success"/>
         <div class="timeline-middle">
-          <Icon name="mdi:cross-circle" class="h-5 w-5" />
+          <Icon name="mdi:progress-clock" class="h-5 w-5 text-info" />
         </div>
         <div class="timeline-start mb-10 md:text-end">
           <div class="text-lg font-black">BETA</div>
